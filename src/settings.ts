@@ -34,16 +34,7 @@ export class CookSettingsTab extends PluginSettingTab {
       .setName('Preview Options')
       .setHeading();
 
-    new Setting(containerEl)
-      .setName('Show images')
-      .setDesc('Show images in the recipe (see https://cooklang.org/docs/spec/#adding-pictures)')
-      .addToggle(toggle => toggle
-        .setValue(this.plugin.settings.showImages)
-        .onChange((value: boolean) => {
-          this.plugin.settings.showImages = value;
-          this.plugin.saveData(this.plugin.settings);
-          this.plugin.reloadCookViews();
-        }));
+    
 
     new Setting(containerEl)
       .setName('Show ingredient list')
