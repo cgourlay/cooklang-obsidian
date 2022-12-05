@@ -48,17 +48,6 @@ export class CookSettingsTab extends PluginSettingTab {
         }));
 
     new Setting(containerEl)
-      .setName('Show cookware list')
-      .setDesc('Show the list of cookware at the top of the recipe')
-      .addToggle(toggle => toggle
-        .setValue(this.plugin.settings.showCookwareList)
-        .onChange((value: boolean) => {
-          this.plugin.settings.showCookwareList = value;
-          this.plugin.saveData(this.plugin.settings);
-          this.plugin.reloadCookViews();
-        }));
-
-    new Setting(containerEl)
       .setName('Show quantities inline')
       .setDesc('Show the ingredient quantities inline in the recipe method')
       .addToggle(toggle => toggle
