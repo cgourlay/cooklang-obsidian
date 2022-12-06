@@ -71,17 +71,6 @@ export class CookSettingsTab extends PluginSettingTab {
         }));
 
     new Setting(containerEl)
-      .setName('Show total time')
-      .setDesc('Show the total of all timers at the top of the recipe')
-      .addToggle(toggle => toggle
-        .setValue(this.plugin.settings.showTotalTime)
-        .onChange((value: boolean) => {
-          this.plugin.settings.showTotalTime = value;
-          this.plugin.saveData(this.plugin.settings);
-          this.plugin.reloadCookViews();
-        }));
-
-    new Setting(containerEl)
       .setName('Running Timers Tick')
       .setDesc('Play a ticking sound while a timer is running')
       .addToggle(toggle => toggle
