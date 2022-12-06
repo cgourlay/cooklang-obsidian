@@ -36,17 +36,7 @@ export class CookSettingsTab extends PluginSettingTab {
 
     
 
-    new Setting(containerEl)
-      .setName('Show ingredient list')
-      .setDesc('Show the list of ingredients at the top of the recipe')
-      .addToggle(toggle => toggle
-        .setValue(this.plugin.settings.showIngredientList)
-        .onChange((value: boolean) => {
-          this.plugin.settings.showIngredientList = value;
-          this.plugin.saveData(this.plugin.settings);
-          this.plugin.reloadCookViews();
-        }));
-
+    
     new Setting(containerEl)
       .setName('Show quantities inline')
       .setDesc('Show the ingredient quantities inline in the recipe method')
