@@ -34,19 +34,7 @@ export class CookSettingsTab extends PluginSettingTab {
       .setName('Preview Options')
       .setHeading();
 
-    
-
-    
-    new Setting(containerEl)
-      .setName('Show quantities inline')
-      .setDesc('Show the ingredient quantities inline in the recipe method')
-      .addToggle(toggle => toggle
-        .setValue(this.plugin.settings.showQuantitiesInline)
-        .onChange((value: boolean) => {
-          this.plugin.settings.showQuantitiesInline = value;
-          this.plugin.saveData(this.plugin.settings);
-          this.plugin.reloadCookViews();
-        }));
+  
     
     new Setting(containerEl)
       .setName('Show timers list')
