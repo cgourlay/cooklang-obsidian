@@ -25,16 +25,7 @@ export class CookSettingsTab extends PluginSettingTab {
     this.plugin = plugin;
   }
 
-  display(): void {
-    let { containerEl } = this;
-
-    containerEl.empty();
-
-    new Setting(containerEl)
-      .setName('Preview Options')
-      .setHeading();
-
-  
+  display(): void {  
     
     new Setting(containerEl)
       .setName('Inline interactive timers')
