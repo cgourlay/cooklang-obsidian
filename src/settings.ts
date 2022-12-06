@@ -37,17 +37,6 @@ export class CookSettingsTab extends PluginSettingTab {
   
     
     new Setting(containerEl)
-      .setName('Show timers list')
-      .setDesc('Show the list of timers at the top of the recipe')
-      .addToggle(toggle => toggle
-        .setValue(this.plugin.settings.showTimersList)
-        .onChange((value: boolean) => {
-          this.plugin.settings.showTimersList = value;
-          this.plugin.saveData(this.plugin.settings);
-          this.plugin.reloadCookViews();
-        }));
-
-    new Setting(containerEl)
       .setName('Inline interactive timers')
       .setDesc('Allow clicking on a time in a recipe method to start a timer')
       .addToggle(toggle => toggle
