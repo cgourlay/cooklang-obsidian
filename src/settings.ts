@@ -48,16 +48,5 @@ export class CookSettingsTab extends PluginSettingTab {
           this.plugin.saveData(this.plugin.settings);
           this.plugin.reloadCookViews();
         }));
-
-    new Setting(containerEl)
-      .setName('Alarm When Timers End')
-      .setDesc('Play a ring sound when a running timer finishes')
-      .addToggle(toggle => toggle
-        .setValue(this.plugin.settings.timersRing)
-        .onChange((value: boolean) => {
-          this.plugin.settings.timersRing = value;
-          this.plugin.saveData(this.plugin.settings);
-          this.plugin.reloadCookViews();
-        }));
   }
 }
